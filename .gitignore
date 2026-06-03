@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# backup originals for personal photos — don't ship these in the repo
+/public/photos/originals/
