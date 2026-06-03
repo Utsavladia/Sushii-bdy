@@ -38,7 +38,7 @@ function CelebrationInner() {
   if (ready !== "ok") {
     return (
       <main className="min-h-screen flex items-center justify-center">
-        <PetalsBackground count={20} />
+        <PetalsBackground />
         <p className="font-script text-2xl" style={{ color: "rgba(74,36,56,0.5)" }}>
           loading…
         </p>
@@ -48,7 +48,7 @@ function CelebrationInner() {
 
   return (
     <main className="relative min-h-screen">
-      <PetalsBackground count={36} />
+      <PetalsBackground />
       <AnimatePresence>
         {showIntro && <Intro onDone={() => setShowIntro(false)} />}
       </AnimatePresence>

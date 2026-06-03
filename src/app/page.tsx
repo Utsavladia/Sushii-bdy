@@ -7,12 +7,15 @@ import PetalsBackground from "@/components/PetalsBackground";
 import CountdownTimer from "@/components/CountdownTimer";
 import LockedGift from "@/components/LockedGift";
 import MusicToggle from "@/components/MusicToggle";
+import FlowerChooser from "@/components/FlowerChooser";
 import { content } from "@/content";
 import { getRemaining } from "@/lib/time";
 
 export default function CountdownPage() {
   const router = useRouter();
   const [unlocked, setUnlocked] = useState(false);
+  // Always show the chooser on every page load (including refreshes).
+  const [chooserOpen, setChooserOpen] = useState(true);
 
   useEffect(() => {
     if (getRemaining().unlocked) {
@@ -29,7 +32,7 @@ export default function CountdownPage() {
 
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center px-6 py-16">
-      <PetalsBackground count={32} />
+      <PetalsBackground />
 
       <div className="relative z-10 w-full max-w-3xl text-center">
         <motion.div
@@ -101,6 +104,8 @@ export default function CountdownPage() {
       </div>
 
       <MusicToggle />
+
+      {chooserOpen && <FlowerChooser onChosen={() => setChooserOpen(false)} />}
     </main>
   );
 }
