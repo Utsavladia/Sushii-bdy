@@ -15,7 +15,7 @@ export const content = {
   // Examples:
   //   "2026-06-06T00:00:00+05:30"  → midnight IST on June 6, 2026
   //   "2026-06-06T00:00:00-04:00"  → midnight EDT on June 6, 2026
-  birthday: "2026-06-06T00:00:00+05:30",
+  birthday: "2026-06-05T23:00:00+05:30",
 
   // OPTIONAL: a secret code so you can preview the celebration page early.
   // Visit /celebration?key=YOUR_SECRET_KEY to bypass the date lock.
@@ -25,7 +25,7 @@ export const content = {
   // ─── Countdown page copy ─────────────────────────────────────────
   countdownTitle: "For my Sushii",
   countdownTagline: "Something beautiful is blooming for you…",
-  countdownSubtle: "come back on June 6 ♡",
+  countdownSubtle: "come back on June 5, 11 PM ♡",
 
   // ─── The love letter (typewriter section) ────────────────────────
   loveLetterTitle: "A letter, for you.",
